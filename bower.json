@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "authors": [
+    "iam2611008 <dragonwarrior1008@yandex.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

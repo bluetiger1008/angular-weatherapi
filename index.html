@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TestModule">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>App</title>
+
+    <link href="app/app.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="TestModuleController as vm">
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+					    <label for="weather">Input City Name</label>
+					    <input type="text" class="form-control" id="cityNameInput" aria-describedby="cityNameInput" placeholder="Enter City Name"  ng-model="vm.cityName" ng-change="vm.onInputChange();">
+					</div>
+				</div>
+			</div>
+			<div class="row" ng-if="vm.weatherData">
+				<div class="col-md-6">
+					<p>base: {{vm.weatherData.base}}</p>
+					<p>clouds: {{vm.weatherData.clouds.all}}</p>
+					<p>coord: {{vm.weatherData.coord.lat}}, {{vm.weatherData.coord.lng}}</p>
+					<p>humidity: {{vm.weatherData.main.humidity}}</p>
+					<p>pressure: {{vm.weatherData.main.pressure}}</p>
+					<p>temp: {{vm.weatherData.main.temp}}</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/app.controller.js"></script>
+</body>
